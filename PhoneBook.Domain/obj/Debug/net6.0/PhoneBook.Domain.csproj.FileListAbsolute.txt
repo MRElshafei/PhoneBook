@@ -1,0 +1,12 @@
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\bin\Debug\net6.0\PhoneBook.Domain.deps.json
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\bin\Debug\net6.0\PhoneBook.Domain.dll
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\bin\Debug\net6.0\PhoneBook.Domain.pdb
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\PhoneBook.Domain.csproj.AssemblyReference.cache
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\PhoneBook.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\PhoneBook.Domain.AssemblyInfoInputs.cache
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\PhoneBook.Domain.AssemblyInfo.cs
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\PhoneBook.Domain.csproj.CoreCompileInputs.cache
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\PhoneBook.Domain.dll
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\refint\PhoneBook.Domain.dll
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\PhoneBook.Domain.pdb
+D:\Work\Contacts\PhoneBook\PhoneBook.Domain\obj\Debug\net6.0\ref\PhoneBook.Domain.dll

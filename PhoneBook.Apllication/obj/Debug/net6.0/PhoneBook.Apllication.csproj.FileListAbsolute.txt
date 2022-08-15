@@ -1,0 +1,15 @@
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\bin\Debug\net6.0\PhoneBook.Apllication.deps.json
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\bin\Debug\net6.0\PhoneBook.Apllication.dll
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\bin\Debug\net6.0\PhoneBook.Apllication.pdb
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\bin\Debug\net6.0\PhoneBook.Domain.dll
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\bin\Debug\net6.0\PhoneBook.Domain.pdb
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\PhoneBook.Apllication.csproj.AssemblyReference.cache
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\PhoneBook.Apllication.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\PhoneBook.Apllication.AssemblyInfoInputs.cache
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\PhoneBook.Apllication.AssemblyInfo.cs
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\PhoneBook.Apllication.csproj.CoreCompileInputs.cache
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\PhoneBook.Apllication.csproj.CopyComplete
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\PhoneBook.Apllication.dll
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\refint\PhoneBook.Apllication.dll
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\PhoneBook.Apllication.pdb
+D:\Work\Contacts\PhoneBook\PhoneBook.Apllication\obj\Debug\net6.0\ref\PhoneBook.Apllication.dll

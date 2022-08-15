@@ -1,0 +1,282 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj": {}
+  },
+  "projects": {
+    "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj",
+        "projectName": "PhoneBook.Apllication",
+        "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj",
+        "packagesPath": "C:\\Users\\melshafei\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\melshafei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj": {
+                "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj",
+        "projectName": "PhoneBook.Domain",
+        "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj",
+        "packagesPath": "C:\\Users\\melshafei\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\melshafei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj",
+        "projectName": "PhoneBook.JWTAuthentication",
+        "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj",
+        "packagesPath": "C:\\Users\\melshafei\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\melshafei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj",
+        "projectName": "PhoneBook.Persistence",
+        "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj",
+        "packagesPath": "C:\\Users\\melshafei\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\melshafei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj": {
+                "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj"
+              },
+              "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj": {
+                "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj"
+              },
+              "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj": {
+                "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.22.0, )"
+            },
+            "jose-jwt": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
