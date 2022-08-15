@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "637c7362-fa52-4987-bba2-8a1600c7d783",
+		"name": "PhoneBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n  \"firstName\": \"Mohamed\",\r\n  \"lastName\": \"Raafat\",\r\n  \"username\": \"MOHA\",\r\n  \"email\": \"test@Test.com\",\r\n  \"password\": \"P@sword123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7198/api/auth/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7198",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Userllogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\": \"test@Test.com\",\r\n  \"password\": \"P@sword123\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7198/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7198",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wether",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNT0hBIiwianRpIjoiZTAyMTJiZTAtMDI5YS00NmEyLTg5ZjMtZGFiNTRlYWRkNDY3IiwiZW1haWwiOiJ0ZXN0QFRlc3QuY29tIiwidWlkIjoiNmZmZGRkNTQtZTJlYi00NDgxLWE5ZDktYzk5ZjJjMzFjOWFhIiwicm9sZXMiOiJVc2VyIiwiZXhwIjoxNjYyOTIwNDA4LCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.5v7WrvuFaiQCm1CnuSgVxMZboblVx_KJLvQVw_CHa5U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7198/WeatherForecast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7198",
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNT0hBIiwianRpIjoiZTAyMTJiZTAtMDI5YS00NmEyLTg5ZjMtZGFiNTRlYWRkNDY3IiwiZW1haWwiOiJ0ZXN0QFRlc3QuY29tIiwidWlkIjoiNmZmZGRkNTQtZTJlYi00NDgxLWE5ZDktYzk5ZjJjMzFjOWFhIiwicm9sZXMiOiJVc2VyIiwiZXhwIjoxNjYyOTIwNDA4LCJpc3MiOiJTZWN1cmVBcGkiLCJhdWQiOiJTZWN1cmVBcGlVc2VyIn0.5v7WrvuFaiQCm1CnuSgVxMZboblVx_KJLvQVw_CHa5U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7198/api/Contact/getallcontact",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7198",
+					"path": [
+						"api",
+						"Contact",
+						"getallcontact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddContact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7198/api/Contact/addcontact",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7198",
+					"path": [
+						"api",
+						"Contact",
+						"addcontact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update contact",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Contact",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
