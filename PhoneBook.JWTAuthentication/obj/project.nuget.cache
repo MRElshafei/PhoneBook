@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O5loGDtjLjWa0XPKrtdMxRsYF8ygqkQmBYuNWfFawyQb1umI9j3M5ML7Uz46klCUn5ewTc2TmVyMvmn0D+DU3w==",
+  "dgSpecHash": "mztcEz/MCdjRRPZxzGAoo+2M5G6/oMmQoM2kB9ZHmB7gsEX0wFAeYE0SiwDK+v66SP4kJVR786sXRo6iww08wA==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj",
+  "projectFilePath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -4326,11 +4326,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj",
+      "projectUniqueName": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj",
       "projectName": "PhoneBook.Persistence",
-      "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj",
+      "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj",
       "packagesPath": "C:\\Users\\melshafei\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\obj\\",
+      "outputPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\melshafei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4347,14 +4347,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj": {
-              "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj"
+            "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj": {
+              "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj"
             },
-            "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj": {
-              "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj"
+            "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj": {
+              "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj"
             },
-            "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj": {
-              "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj"
+            "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj": {
+              "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.JWTAuthentication\\PhoneBook.JWTAuthentication.csproj"
             }
           }
         }

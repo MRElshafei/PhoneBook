@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PsgBx7LUIgNDmgaCrf4aEbkV5cL5XICuD9C3izqPsKFw6jSAasQiXSl6Eg2sDNLvvx1YZxuZNDyj6Y4Qt8qctQ==",
+  "dgSpecHash": "i3Cwypmv6h0h2KS83uRcCBt1T4I4AYThyQGWhlpQVeS5FhguSiqqvlRqUp7C/yeDleLrwjJuxHkKgB3R02VEWw==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj",
+  "projectFilePath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Apllication\\PhoneBook.Apllication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\melshafei\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\melshafei\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",

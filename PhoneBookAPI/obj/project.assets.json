@@ -4630,11 +4630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\Contacts\\PhoneBook\\PhoneBookAPI\\PhoneBookAPI.csproj",
+      "projectUniqueName": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBookAPI\\PhoneBookAPI.csproj",
       "projectName": "PhoneBookAPI",
-      "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBookAPI\\PhoneBookAPI.csproj",
+      "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBookAPI\\PhoneBookAPI.csproj",
       "packagesPath": "C:\\Users\\melshafei\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBookAPI\\obj\\",
+      "outputPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBookAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\melshafei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4651,8 +4651,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj": {
-              "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj"
+            "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj": {
+              "projectPath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj"
             }
           }
         }

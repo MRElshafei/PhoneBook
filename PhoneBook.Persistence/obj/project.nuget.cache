@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hcWHfBjR8sPWJCbhmQBfhKJMpIlVPzMTvdbVpurudKMNCKYTrSaV6nHIpgs4q6GAgY+SyKwOYTiy+HhlFgdLiA==",
+  "dgSpecHash": "e6dJQsTw50Q40hTHkO3hQo5JtMuV5ezXTNjqyxHEVimgUi/Exk9D8GJDX2Zz0ZeCr9ylqxvDiO2u3EomR4zo+w==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj",
+  "projectFilePath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBook.Persistence\\PhoneBook.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\melshafei\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\melshafei\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

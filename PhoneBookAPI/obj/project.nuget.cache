@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bRs9i1uTfuv2cYtX8atZ7G8xl/Jd6NXCoLIWjmg+eExwOt5Nxg4yvnLNnyo43GCNVS/R41llRuXpbyQzCi7QVg==",
+  "dgSpecHash": "dvuIs4mpKuEhZ1ay/YDxhoJemqTZToj7NQbuqluU7EgfcwSO34EyoM80VvbKZ9AOfO5xcRjwHVJN3IRIND4qiQ==",
   "success": true,
-  "projectFilePath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBookAPI\\PhoneBookAPI.csproj",
+  "projectFilePath": "D:\\Work\\Contacts\\PhoneBook\\PhoneBook\\PhoneBookAPI\\PhoneBookAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\melshafei\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\melshafei\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
