@@ -9,6 +9,7 @@ namespace PhoneBook.Persistence.AuthRepositories
 {
     public class LoginModel
     {
+
         [Required]
         public string Email { get; set; }
 

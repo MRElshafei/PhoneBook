@@ -10,3 +10,15 @@ D:\Work\Contacts\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBoo
 D:\Work\Contacts\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\refint\PhoneBook.JWTAuthentication.dll
 D:\Work\Contacts\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBook.JWTAuthentication.pdb
 D:\Work\Contacts\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\ref\PhoneBook.JWTAuthentication.dll
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\bin\Debug\net6.0\PhoneBook.JWTAuthentication.deps.json
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\bin\Debug\net6.0\PhoneBook.JWTAuthentication.dll
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\bin\Debug\net6.0\PhoneBook.JWTAuthentication.pdb
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBook.JWTAuthentication.csproj.AssemblyReference.cache
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBook.JWTAuthentication.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBook.JWTAuthentication.AssemblyInfoInputs.cache
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBook.JWTAuthentication.AssemblyInfo.cs
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBook.JWTAuthentication.csproj.CoreCompileInputs.cache
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBook.JWTAuthentication.dll
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\refint\PhoneBook.JWTAuthentication.dll
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\PhoneBook.JWTAuthentication.pdb
+D:\Work\test Program\PhoneBook\PhoneBook.JWTAuthentication\obj\Debug\net6.0\ref\PhoneBook.JWTAuthentication.dll

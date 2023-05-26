@@ -9,6 +9,7 @@ namespace PhoneBook.Persistence.AuthRepositories
 {
     public class RegisterModel
     {
+
         [Required, StringLength(100)]
         public string? FirstName { get; set; }
 

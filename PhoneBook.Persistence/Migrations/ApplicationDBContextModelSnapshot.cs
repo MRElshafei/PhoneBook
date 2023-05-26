@@ -172,9 +172,10 @@ namespace PhoneBook.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("HomeNumber")
+                    b.Property<int?>("HomeNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("LastName")
@@ -183,7 +184,7 @@ namespace PhoneBook.Persistence.Migrations
                     b.Property<int>("PhoneNumber")
                         .HasColumnType("int");
 
-                    b.Property<int>("WorkNumber")
+                    b.Property<int?>("WorkNumber")
                         .HasColumnType("int");
 
                     b.HasKey("ContactId");
@@ -206,9 +207,10 @@ namespace PhoneBook.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("HomeNumber")
+                    b.Property<int?>("HomeNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("LastName")
@@ -220,7 +222,7 @@ namespace PhoneBook.Persistence.Migrations
                     b.Property<string>("UserEmaile")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("WorkNumber")
+                    b.Property<int?>("WorkNumber")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

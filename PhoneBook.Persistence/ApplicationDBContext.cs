@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PhoneBook.Domain;
 using PhoneBook.JWTAuthentication;
+using PhoneBook.Persistence.AuthRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,9 @@ namespace PhoneBook.Persistence
         }
         public DbSet<Contact> Contact { get; set; }
         public DbSet<ContactInfo> ContactInfo { get; set; }
+     
 
-        
+
+
     }
 }

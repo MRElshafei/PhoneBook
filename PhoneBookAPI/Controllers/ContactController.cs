@@ -35,7 +35,7 @@ namespace PhoneNumberApplication.Controllers
                 // Check if there is no contacts
                 if (getEventDetailQuery is null|| string.IsNullOrEmpty(getEventDetailQuery.ToString())  )
                 {
-                    return Ok("No Contacts Yet!!");
+                    return NotFound("No Contacts Yet!!");
                 }
                 return Ok(await _sender.Send(getEventDetailQuery));
             }
@@ -49,7 +49,6 @@ namespace PhoneNumberApplication.Controllers
         [HttpPost("addcontact")]
         public async Task<IActionResult> Create([FromBody] ContactInfo contactInfo)
         {
-           
             try
             {
                 if (!ModelState.IsValid)
@@ -61,7 +60,7 @@ namespace PhoneNumberApplication.Controllers
                     //check if contactInfo is empty
                     if (contactInfo is null)
                     {
-                        return Ok("Your Contact Informations are Wrong or Empty !!");
+                        return BadRequest("Your Contact Informations are Wrong or Empty !!");
                     }
                     var userId = User.FindFirstValue(ClaimTypes.Email);
                     contactInfo.UserEmaile = userId;
