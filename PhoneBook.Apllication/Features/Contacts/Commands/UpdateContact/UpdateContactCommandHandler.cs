@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using PhoneBook.Apllication.Features.Contacts.Commands.AddContact;
 using PhoneBook.Apllication.Interfaces;
 using PhoneBook.Domain;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook.Apllication.Features.Contacts.Commands.UpdateContact
 {
-    public class UpdateContactCommandHandler: IRequestHandler< UpdateContactCommand, ContactInfo>
+    public class UpdateContactCommandHandler: IRequestHandler< UpdateContactCommandInput, UpdateContactCommandOutput>
     {
         private readonly IAsyncRepository _asyncRepository;
         public UpdateContactCommandHandler(IAsyncRepository asyncRepository)
@@ -17,10 +18,13 @@ namespace PhoneBook.Apllication.Features.Contacts.Commands.UpdateContact
             _asyncRepository = asyncRepository;
         }
 
-        public async Task<ContactInfo> Handle(UpdateContactCommand request, CancellationToken cancellationToken)
+        public async Task<UpdateContactCommandOutput> Handle(UpdateContactCommandInput request, CancellationToken cancellationToken)
         {
-            var contacts = await _asyncRepository.UpdateAsync(request.contactInfo);
-            return contacts;
+            UpdateContactCommandOutput output = new UpdateContactCommandOutput();
+           
+            output.message = await _asyncRepository.UpdateAsync(request.UpdatedContact);
+            return output;
+
         }
     }
 }

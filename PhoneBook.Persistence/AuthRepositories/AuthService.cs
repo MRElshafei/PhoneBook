@@ -24,21 +24,17 @@ namespace PhoneBook.Persistence.AuthRepositories
 
         public async Task<AuthModel> RegisterAsync(RegisterModel model)
         {
-            ////Check if the Email is already Exist or not
-            //if (await _userManager.fi  .FindByEmailAsync(model.Email) is not null)
-            //    return new AuthModel { Message = "Email is already registered!" };
-            ////Check if the Username is already Exist or not
-            //if (await _userManager.FindByNameAsync(model.Username) is not null)
-            //    return new AuthModel { Message = "Username is already registered!" };
-            //we can use here Mapper
+ 
             var user = new ApplicationUser
             {
                 UserName = model.Username,
                 Email = model.Email,
                 FirstName = model.FirstName,
-                LastName = model.LastName
+                LastName = model.LastName,
+                
+                
             };
-
+            
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (!result.Succeeded)

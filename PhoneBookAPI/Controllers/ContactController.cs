@@ -8,6 +8,7 @@ using PhoneBook.Apllication.Features.Contacts.Commands.DeleteContact;
 using PhoneBook.Apllication.Features.Contacts.Commands.UpdateContact;
 using PhoneBook.Apllication.Features.Contacts.Queries.GetAllContact;
 using PhoneBook.Domain;
+using System;
 using System.Security.Claims;
 
 namespace PhoneNumberApplication.Controllers
@@ -31,7 +32,7 @@ namespace PhoneNumberApplication.Controllers
             try
             {
                 var userId = User.FindFirstValue(ClaimTypes.Email);
-                var getAllContactsQuery = new GetAllContactsQuery
+                var getAllContactsQuery = new GetAllContactsQueryInput
                 {
                     Email = userId
                 };
@@ -53,7 +54,6 @@ namespace PhoneNumberApplication.Controllers
 
             catch (Exception)
             {
-                // Handle unexpected exceptions
                 return StatusCode(500, "Sorry, something went wrong!");
             }
 
@@ -62,7 +62,7 @@ namespace PhoneNumberApplication.Controllers
 
         }
         [HttpPost("addcontact")]
-        public async Task<IActionResult> Create([FromBody] ContactInfo contactInfo)
+        public async Task<IActionResult> Create([FromBody] ContactDTO Contact)
         {
             try
             {
@@ -73,14 +73,18 @@ namespace PhoneNumberApplication.Controllers
                 else
                 {
                     //check if contactInfo is empty
-                    if (contactInfo is null)
+                    if (Contact is null)
                     {
                         return BadRequest("Your Contact Informations are Wrong or Empty !!");
                     }
                     var userId = User.FindFirstValue(ClaimTypes.Email);
-                    contactInfo.UserEmaile = userId;
 
-                    var getEventDetailQuery = new AddContactCommand(contactInfo);
+                    var getEventDetailQuery = new AddContactCommandInput
+                    {
+                        UserEmail= userId,
+                        NewContact= Contact,
+                        
+                    };
                     var NewContactInfo = await _mediator.Send(getEventDetailQuery);
 
                     return Ok(NewContactInfo);
@@ -89,7 +93,7 @@ namespace PhoneNumberApplication.Controllers
             catch (Exception)
             {
 
-                return Ok("Sorry,Something went wrong!!!!");
+                return StatusCode(500, "Sorry, something went wrong!");
             }
 
         }
@@ -102,46 +106,54 @@ namespace PhoneNumberApplication.Controllers
                 //check if contactInfo is empty
                 if (contactInfo is null)
                 {
-                    return Ok("Your Contact Informations are Wrong or Empty !!");
+                    return BadRequest("Contact information is missing or invalid!");
                 }
-                var getEventDetailQuery = new UpdateContactCommand(contactInfo);
+                var getEventDetailQuery = new UpdateContactCommandInput
+                {
+                    UpdatedContact= contactInfo
+                };
                 var NewContactInfo = await _mediator.Send(getEventDetailQuery);
                 return Ok(NewContactInfo);
             }
             catch (Exception)
             {
 
-                return Ok("Sorry,Something went wrong!!!!");
+                return StatusCode(500, "Sorry, something went wrong!");
             }
 
         }
 
-        [HttpDelete("DeletePost")]
-        public async Task<IActionResult> Delete([FromBody] ContactInfo contactInfo)
+        [HttpDelete("delete")]
+        public async Task<IActionResult> Delete([FromQuery] Guid contactId)
         {
             try
             {
-                //check if contactInfo is empty
-                if (contactInfo is null)
+                if (contactId == Guid.Empty)
                 {
-                    return Ok("Your Contact Informations are Wrong or Empty !!");
+                    return BadRequest("Invalid Contact ID!");
                 }
-                var deletePostCommand = new DeleteContactQuery(contactInfo);
-                //check if there is no contact like this
-                if (deletePostCommand is null)
+
+                var deleteContactCommand = new DeleteContactQueryInput
                 {
-                    return Ok("Your Contact Informations are Wrong  !!");
+                    ContactId = contactId
+                };
+                var result = await _mediator.Send(deleteContactCommand);
+
+                if (result!=null)
+                {
+                    return Ok(result.message);
                 }
-                var Massage = await _mediator.Send(deletePostCommand);
-                return Ok(Massage);
+                else
+                {
+                    return NotFound("Contact not found");
+                }
             }
             catch (Exception)
             {
-
-                return Ok("Sorry,Something went wrong!!!!");
+                return StatusCode(500, "Sorry, something went wrong!");
             }
-
         }
+
 
     }
 }

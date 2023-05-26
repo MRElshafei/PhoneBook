@@ -2,7 +2,7 @@
 
 namespace PhoneBook.Apllication.Features.Contacts.Queries.GetAllContact
 {
-    public class GetAllContactsQuery : IRequest<GetAllContactsQueryOutput>
+    public class GetAllContactsQueryInput : IRequest<GetAllContactsQueryOutput>
     {
         public string Email { get; set; }
 

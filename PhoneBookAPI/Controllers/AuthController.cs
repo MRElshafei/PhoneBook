@@ -19,6 +19,7 @@ namespace PhoneNumberApplication.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> RegisterAsync([FromBody] RegisterModel model)
         {
+            
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 

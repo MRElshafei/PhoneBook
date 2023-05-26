@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook.Apllication.Features.Contacts.Queries.GetAllContact
 {
-    public class GetAllContactsQueryHandler : IRequestHandler<GetAllContactsQuery, GetAllContactsQueryOutput>
+    public class GetAllContactsQueryHandler : IRequestHandler<GetAllContactsQueryInput, GetAllContactsQueryOutput>
     {
         private readonly IAsyncRepository _asyncRepository;
         private readonly IMapper _mapper;
@@ -20,16 +20,18 @@ namespace PhoneBook.Apllication.Features.Contacts.Queries.GetAllContact
             _asyncRepository = asyncRepository;
             _mapper = mapper;
         }
-        public async Task<GetAllContactsQueryOutput> Handle(GetAllContactsQuery request, CancellationToken cancellationToken)
+        public async Task<GetAllContactsQueryOutput> Handle(GetAllContactsQueryInput request, CancellationToken cancellationToken)
         {
-
-            //GetAllContactsQueryOutput output = new GetAllContactsQueryOutput();
             var contacts = await _asyncRepository.GetAllContactsAsync(request.Email);
             var output = new GetAllContactsQueryOutput
             {
                 AllContacts = _mapper.Map<List<AllContacts>>(contacts)
             };
-             
+
+            #region another solution 
+
+            //GetAllContactsQueryOutput output = new GetAllContactsQueryOutput();
+
             //output.AllContacts =  contacts.Select(c => new AllContacts
             //{
             //   FirstName= c.FirstName,
@@ -41,6 +43,7 @@ namespace PhoneBook.Apllication.Features.Contacts.Queries.GetAllContact
             //   WorkNumber= c.WorkNumber
 
             //}).ToList();
+            #endregion
 
             return output;
         }

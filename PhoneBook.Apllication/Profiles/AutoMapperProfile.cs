@@ -11,6 +11,8 @@ namespace PhoneBook.Apllication.Profiles
         public AutoMapperProfile()
         {
             CreateMap<ContactInfo, AllContacts>();
+            CreateMap< ContactDTO,ContactInfo > ();
+
 
         }
 

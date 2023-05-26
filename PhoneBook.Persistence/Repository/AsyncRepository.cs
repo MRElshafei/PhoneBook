@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using PhoneBook.Apllication.Interfaces;
 using PhoneBook.Domain;
-using System.Security.Claims;
 
 namespace PhoneBook.Persistence.Repository
 {
@@ -13,44 +13,96 @@ namespace PhoneBook.Persistence.Repository
         {
             _dbContext = dbContext;
         }
-
-        public async Task<ContactInfo> AddAsyncContact(ContactInfo NewContact)
+        public async Task<string> AddAsyncContact(ContactInfo newContact)
         {
-            await _dbContext.ContactInfo.AddAsync(NewContact);
+            // Check if contact already exists
+            var existingContact = await _dbContext.ContactInfo
+                .FirstOrDefaultAsync(c => c.FirstName == newContact.FirstName &&
+                                           c.LastName == newContact.LastName &&
+                                           c.PhoneNumber == newContact.PhoneNumber &&
+                                           c.UserEmaile == newContact.UserEmaile);
+
+            if (existingContact != null)
+            {
+                return "Contact already exists!";
+            }
+
+            await _dbContext.ContactInfo.AddAsync(newContact);
             await _dbContext.SaveChangesAsync();
-            return  NewContact;         
+
+            return "Contact created successfully";
         }
 
-        public async Task<String> DeleteAsync(ContactInfo DeletedContact)
+
+        public async Task<String> DeleteAsync(Guid ContactId)
         {
-             _dbContext.Set< ContactInfo>().Remove(DeletedContact);
-             await _dbContext.SaveChangesAsync();
+           var contactInfo= _dbContext.ContactInfo.FirstOrDefault(c => c.Id == ContactId);
+            if (contactInfo == null)
+            {
+                return  null;
+            }
+            _dbContext.Remove(contactInfo);
+            //_dbContext.Set<ContactInfo>().Remove(DeletedContact);
+            await _dbContext.SaveChangesAsync();
             return "Contact is Removed Successfully";
         }
 
         public async Task<List<ContactInfo>> GetAllContactsAsync(string Email)
         {
-            return await _dbContext.ContactInfo.Where(x=>x.UserEmaile==Email).ToListAsync();
+            return await _dbContext.ContactInfo.Where(x => x.UserEmaile == Email).ToListAsync();
         }
 
-        public async Task<ContactInfo> UpdateAsync(ContactInfo EditedContact)
+        public async Task<string> UpdateAsync(ContactInfo editedContact)
         {
-            //ContactInfo oldContact =await _dbContext.ContactInfo.FirstOrDefaultAsync(x => x.Id == EditedContact.Id);
-            //oldContact.Emaile=EditedContact.Emaile;
-            //oldContact.Adress=EditedContact.Adress;
-            //oldContact.PhoneNumber=EditedContact.PhoneNumber;
-            //oldContact.WorkNumber=EditedContact.WorkNumber;
-            //oldContact.HomeNumber=EditedContact.HomeNumber;
-            //oldContact.LastName=EditedContact.LastName;
-            //oldContact.FirstName=EditedContact.FirstName;
-            //await _dbContext.ContactInfo.AddAsync(oldContact);
-            //await _dbContext.SaveChangesAsync();
-            //return oldContact;
-            // var user=_dbContext.ContactInfo.FirstOrDefaultAsync(x => x.PhoneNumber == EditedContact.PhoneNumber);
- 
-            _dbContext.Entry(EditedContact).State = EntityState.Modified;
+            // Check if the Contact exists
+            var existingContact = await _dbContext.ContactInfo.FindAsync(editedContact.Id);
+            if (existingContact == null)
+            {
+                return "The Contact does not exist";
+            }
+
+            // Update the properties of the existing contact
+            if (!string.IsNullOrWhiteSpace(editedContact.FirstName))
+            {
+                existingContact.FirstName = editedContact.FirstName;
+            }
+
+            if (!string.IsNullOrWhiteSpace(editedContact.LastName))
+            {
+                existingContact.LastName = editedContact.LastName;
+            }
+
+            if (editedContact.PhoneNumber != 0)
+            {
+                existingContact.PhoneNumber = editedContact.PhoneNumber;
+            }
+
+            if (editedContact.HomeNumber.HasValue)
+            {
+                existingContact.HomeNumber = editedContact.HomeNumber;
+            }
+
+            if (editedContact.WorkNumber.HasValue)
+            {
+                existingContact.WorkNumber = editedContact.WorkNumber;
+            }
+
+            if (!string.IsNullOrWhiteSpace(editedContact.Adress))
+            {
+                existingContact.Adress = editedContact.Adress;
+            }
+
+            if (!string.IsNullOrWhiteSpace(editedContact.Emaile))
+            {
+                existingContact.Emaile = editedContact.Emaile;
+            }
+            _dbContext.Update(existingContact);
+
+            // Save the changes to the database
             await _dbContext.SaveChangesAsync();
-            return EditedContact;
+
+            return "Contact updated successfully";
         }
+
     }
 }
