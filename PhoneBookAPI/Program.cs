@@ -1,6 +1,7 @@
 using PhoneBook.Apllication.Interfaces;
 using PhoneBook.Persistence.Repository;
 using MediatR;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 //using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.AspNetCore.Identity;
@@ -16,9 +17,12 @@ using PhoneBook.Persistence.Repository;
 using System.Configuration;
 using System.Reflection;
 using System.Text;
+using PhoneBook.Apllication.Profiles;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 builder.Services.AddControllers();
 builder.Services.AddMediatR(typeof(IAsyncRepository).Assembly);

@@ -17,34 +17,49 @@ namespace PhoneNumberApplication.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
-        private readonly ISender _sender;
+        private readonly IMediator _mediator;
 
-        public ContactController(ISender sender)
+        public ContactController(IMediator mediator)
         {
-            _sender = sender;
+            _mediator = mediator;
         }
 
-        
+
         [HttpGet("getallcontact")]
         public async Task<IActionResult> GetAllContacts()
         {
             try
             {
                 var userId = User.FindFirstValue(ClaimTypes.Email);
-                var getEventDetailQuery = new GetAllContactsQuery(userId);
-                // Check if there is no contacts
-                if (getEventDetailQuery is null|| string.IsNullOrEmpty(getEventDetailQuery.ToString())  )
+                var getAllContactsQuery = new GetAllContactsQuery
+                {
+                    Email = userId
+                };
+
+                if (string.IsNullOrEmpty(getAllContactsQuery.Email))
                 {
                     return NotFound("No Contacts Yet!!");
                 }
-                return Ok(await _sender.Send(getEventDetailQuery));
+
+                var contacts = await _mediator.Send(getAllContactsQuery);
+                if (contacts == null)
+                {
+                    return NotFound("No Contacts Yet!!");
+                }
+
+                return Ok(contacts);
             }
+
+
             catch (Exception)
             {
-
-                return Ok("Sorry,Something went wrong!!!!");
+                // Handle unexpected exceptions
+                return StatusCode(500, "Sorry, something went wrong!");
             }
-            
+
+
+
+
         }
         [HttpPost("addcontact")]
         public async Task<IActionResult> Create([FromBody] ContactInfo contactInfo)
@@ -66,7 +81,7 @@ namespace PhoneNumberApplication.Controllers
                     contactInfo.UserEmaile = userId;
 
                     var getEventDetailQuery = new AddContactCommand(contactInfo);
-                    var NewContactInfo = await _sender.Send(getEventDetailQuery);
+                    var NewContactInfo = await _mediator.Send(getEventDetailQuery);
 
                     return Ok(NewContactInfo);
                 }
@@ -76,10 +91,10 @@ namespace PhoneNumberApplication.Controllers
 
                 return Ok("Sorry,Something went wrong!!!!");
             }
-          
+
         }
 
-        [HttpPut( "UpdatePost")]
+        [HttpPut("UpdatePost")]
         public async Task<IActionResult> Update([FromBody] ContactInfo contactInfo)
         {
             try
@@ -90,7 +105,7 @@ namespace PhoneNumberApplication.Controllers
                     return Ok("Your Contact Informations are Wrong or Empty !!");
                 }
                 var getEventDetailQuery = new UpdateContactCommand(contactInfo);
-                var NewContactInfo = await _sender.Send(getEventDetailQuery);
+                var NewContactInfo = await _mediator.Send(getEventDetailQuery);
                 return Ok(NewContactInfo);
             }
             catch (Exception)
@@ -98,7 +113,7 @@ namespace PhoneNumberApplication.Controllers
 
                 return Ok("Sorry,Something went wrong!!!!");
             }
-           
+
         }
 
         [HttpDelete("DeletePost")]
@@ -117,7 +132,7 @@ namespace PhoneNumberApplication.Controllers
                 {
                     return Ok("Your Contact Informations are Wrong  !!");
                 }
-                var Massage = await _sender.Send(deletePostCommand);
+                var Massage = await _mediator.Send(deletePostCommand);
                 return Ok(Massage);
             }
             catch (Exception)
@@ -125,7 +140,7 @@ namespace PhoneNumberApplication.Controllers
 
                 return Ok("Sorry,Something went wrong!!!!");
             }
-            
+
         }
 
     }

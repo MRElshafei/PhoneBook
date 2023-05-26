@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3uLal1Oek5aYAvV7wJq46DTllio/R1O1ah5/48UigOBJ64WNqsCQPK2XPdPg8T2v/6qb+A9UHvAz7KKKa8wcKA==",
+  "dgSpecHash": "Nh8EPmcvCog57T4Oh2sdL5SX6MV852xEKJcRDFujng20OI7m81Yb38lpNYa6lWwZYSQBC132zH74Y68gcRBHAA==",
   "success": true,
   "projectFilePath": "D:\\Work\\test Program\\PhoneBook\\PhoneBookAPI\\PhoneBookAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\moham\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\jose-jwt\\4.0.0\\jose-jwt.4.0.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",

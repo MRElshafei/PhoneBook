@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using PhoneBook.Apllication.Interfaces;
 using PhoneBook.Domain;
 using System;
@@ -9,17 +10,41 @@ using System.Threading.Tasks;
 
 namespace PhoneBook.Apllication.Features.Contacts.Queries.GetAllContact
 {
-    public class GetAllContactsQueryHandler : IRequestHandler<GetAllContactsQuery, List<ContactInfo>>
+    public class GetAllContactsQueryHandler : IRequestHandler<GetAllContactsQuery, GetAllContactsQueryOutput>
     {
         private readonly IAsyncRepository _asyncRepository;
-        public GetAllContactsQueryHandler (IAsyncRepository asyncRepository)
+        private readonly IMapper _mapper;
+
+        public GetAllContactsQueryHandler(IAsyncRepository asyncRepository, IMapper mapper)
         {
             _asyncRepository = asyncRepository;
+            _mapper = mapper;
         }
-        public async Task<List<ContactInfo>> Handle(GetAllContactsQuery request, CancellationToken cancellationToken)
+        public async Task<GetAllContactsQueryOutput> Handle(GetAllContactsQuery request, CancellationToken cancellationToken)
         {
+
+            //GetAllContactsQueryOutput output = new GetAllContactsQueryOutput();
             var contacts = await _asyncRepository.GetAllContactsAsync(request.Email);
-            return contacts;
+            var output = new GetAllContactsQueryOutput
+            {
+                AllContacts = _mapper.Map<List<AllContacts>>(contacts)
+            };
+             
+            //output.AllContacts =  contacts.Select(c => new AllContacts
+            //{
+            //   FirstName= c.FirstName,
+            //   LastName= c.LastName,    
+            //   PhoneNumber= c.PhoneNumber,
+            //   Adress= c.Adress,
+            //   Emaile= c.Emaile,
+            //   HomeNumber= c.HomeNumber,
+            //   WorkNumber= c.WorkNumber
+
+            //}).ToList();
+
+            return output;
         }
+
+  
     }
 }

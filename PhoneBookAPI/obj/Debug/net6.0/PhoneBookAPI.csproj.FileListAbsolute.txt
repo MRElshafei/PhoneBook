@@ -167,3 +167,4 @@ D:\Work\test Program\PhoneBook\PhoneBookAPI\obj\Debug\net6.0\refint\PhoneBookAPI
 D:\Work\test Program\PhoneBook\PhoneBookAPI\obj\Debug\net6.0\PhoneBookAPI.pdb
 D:\Work\test Program\PhoneBook\PhoneBookAPI\obj\Debug\net6.0\PhoneBookAPI.genruntimeconfig.cache
 D:\Work\test Program\PhoneBook\PhoneBookAPI\obj\Debug\net6.0\ref\PhoneBookAPI.dll
+D:\Work\test Program\PhoneBook\PhoneBookAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
